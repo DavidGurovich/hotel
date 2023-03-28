@@ -12,6 +12,38 @@ const Room = ({ room }) => {
        src={image} 
        alt="" />
     </div>
+    <div className='bg-white shadow-lg max-w-[300px] mx-auto h-[60px] 
+    -translate-y-1/2 
+    flex justify-center items-center uppercase 
+    font-tertiary tracking-[1px] font-semibold text-base'>
+      <div className='flex justify-between w-[80%] '>
+          <div className='flex items-center gap-x-2'>
+            <div className='text-accent'>
+            <BsArrowsFullscreen className='text-[15px]'/>
+            </div>
+            <div className='flex gap-x-1'>
+              <div>Size</div>
+              <div>{size}</div>
+            </div>
+          </div>
+          <div className='flex items-center gap-x-2'>
+            <div className='text-accent'>
+            <BsPeople className='text-[18px]'/>
+            </div>
+            <div className='flex gap-x-1'>
+              <div>Max People</div>
+              <div>{maxPerson}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div>
+          <Link to={`/room/${id}`}>
+            <h3> {}</h3>
+          </Link>
+        </div>
+      </div>
   </div>
 );
 };
