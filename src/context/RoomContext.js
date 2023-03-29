@@ -17,9 +17,13 @@ const RoomProvider = ({children}) => {
   
   const handleClick = (e) => {
     e.preventDefault();
-    console.log(total);
+    
+    const newRooms = roomData.filter(room => {
+      return total <= room.maxPerson
+    })
+    setRooms(newRooms);
   }
-  
+  console.log(rooms)
   
   return ( 
   <RoomContext.Provider value = {{rooms, adults, setAdults, kids, setKids, handleClick}}>
