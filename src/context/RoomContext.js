@@ -23,7 +23,7 @@ const RoomProvider = ({children}) => {
     })
     setRooms(newRooms);
   }
-  console.log(rooms)
+ 
   
   return ( 
   <RoomContext.Provider value = {{rooms, adults, setAdults, kids, setKids, handleClick}}>
